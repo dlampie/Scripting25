@@ -1,0 +1,188 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  color: #333;
+  background-color: #fff;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  background-color: #f9f3e8;
+  padding: 60px 80px;
+}
+
+.hero-text {
+  width: 50%;
+}
+
+.hero-text .new-arrival {
+  text-transform: uppercase;
+  color: #a27b5c;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.hero-text .hero-desc {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.hero .btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.hero .btn:hover {
+  background-color: #444;
+}
+
+.hero-img {
+  width: 50%;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+}
+
+/* BROWSE SECTION */
+.browse {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.browse h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.browse .subtitle {
+  color: #777;
+  margin-bottom: 50px;
+}
+
+.browse-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.browse-grid img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.browse-grid h4 {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* PRODUCTS SECTION */
+.products {
+  text-align: center;
+  padding: 80px;
+  background-color: #fff;
+}
+
+.products h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.product {
+  width: 250px;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.product h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.product .desc {
+  color: #777;
+  font-size: 14px;
+}
+
+.product .price {
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* INSPIRATION SECTION */
+.inspiration {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 80px;
+}
+
+.insp-text {
+  width: 50%;
+  padding-right: 40px;
+}
+
+.insp-text h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.insp-text p {
+  color: #555;
+  margin: 20px 0 30px;
+}
+
+.btn.explore {
+  background-color: #b88e2f;
+}
+
+.insp-img {
+  width: 50%;
+}
+
+.insp-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 40px 0;
+}
+
+footer h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: #777;
+  font-size: 14px;
+}
