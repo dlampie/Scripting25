@@ -1,0 +1,52 @@
+body {
+  
+  font-family: 'Poppins', sans-serif;
+  background-color: #e8e5d9;
+  color: #2d2d2d;
+}
+
+.navbar {
+  background-color: #c8d5b9 !important;
+}
+
+.nav-link, .navbar-brand {
+  color: #2d2d2d !important;
+}
+
+.hero-section {
+  background-color: #b7c8a3;
+  color: white;
+}
+
+.about-text {
+  background-color: #f0eee3;
+  flex: 1;
+}
+
+.profile-img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}
+
+.carousel-item img {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+footer {
+  background-color: #c8d5b9;
+  color: #2d2d2d;
+
+}
+
+.btn-outline-dark {
+  border-color: #2d2d2d;
+  color: #2d2d2d;
+}
+  
+
+.btn-outline-dark:hover {
+  background-color: #2d2d2d;
+  color: white;
+}
