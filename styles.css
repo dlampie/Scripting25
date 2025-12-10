@@ -1,0 +1,97 @@
+/* instead of greens i went with purple for a more fantasy/royal look*/
+
+body {
+  font-family: 'ABeeZee', sans-serif;
+  background: linear-gradient(180deg, #1e1b3a, #342e59, #4a3f72);
+  color: #f5eaff;
+}
+
+/* sparkle layer  */
+.sparkle-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+/* header*/
+ .fantasy-header {
+  background: linear-gradient(90deg, #6a2bbf, #9b5de5, #b088f9);
+  color: #f8eaff;
+  font-family: 'Bubblegum Sans', cursive;
+  position: relative;
+  box-shadow: 0 0 35px rgba(190,150,255,0.5);
+}
+
+.glowing-title {
+  text-shadow: 0 0 12px #e7d4ff, 0 0 24px #b788ff;
+}
+
+.magic-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* cards  */
+.fantasy-card {
+
+  border: 2px solid #c7b0ff;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(166, 129, 255, 0.3);
+  color: #f4e9ff;
+}
+
+/* button */
+.btn-fantasy {
+  background: linear-gradient(180deg, #7a3fe0, #5b2bb8);
+  color: #f3e9ff;
+  border: none;
+}
+.btn-fantasy:hover {
+  background: linear-gradient(180deg, #8d52ff, #6933d1);
+}
+
+/* story box */
+.fantasy-story {
+  border: 2px solid #d4b4ff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  font-size: 1.15rem;
+  font-family: 'Fuzzy Bubbles', cursive;
+  color: #f8eaff;
+}
+
+.highlight {
+  background: rgba(255, 230, 109, 0.45);
+  padding: 3px 6px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(255, 225, 150, 0.6);
+  
+}
+
+/* Foote r  */
+.fantasy-footer {
+
+  background: linear-gradient(90deg, #6a2bbf, #9b5de5);
+  color: #f5eaff;
+}
+
+.sparkle {
+  position: absolute;
+  top: -20px;
+  width: 6px;
+  height: 6px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 12px white;
+  animation: fall linear forwards;
+}
+@keyframes fall {
+  to {
+    transform: translateY(120vh);
+    opacity: 0;
+  }
+}

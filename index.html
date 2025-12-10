@@ -1,92 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devin Lampier | Bio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a2e0ad8d3f.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dragon Picnic — Fantasy Mad Libs</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-fantasy">
 
-<!-- Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#home">Devin Lampier</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="#connect">Connect</a></li>
-      </ul>
+  <div class="sparkle-container"></div>
+
+  <header class="fantasy-header py-5 mb-4 shimmer">
+    <div class="container text-center">
+      <h1 class="display-3 mb-2 glowing-title"> Dragon Picnic </h1>
+      <p class="lead magic-subtitle">Craft your own whimsical fantasy story.</p>
     </div>
-  </div>
-</nav>
+  </header>
 
-<!-- Hero  -->
-<header id="home" class="text-center py-5 hero-section">
-  <div class="container">
-    <h1 class="fw-bold display-4">Devin Lampier</h1>
-    <p class="lead">Photographer • Designer • Traveler</p>
-    <p class="fst-italic">"Through lens and life."</p>
-  </div>
-</header>
+  <main class="container mb-5 fade-in">
+    <div class="row g-4">
+      <section class="col-lg-6">
+        <div class="card shadow-sm fantasy-card">
+          <div class="card-body">
+            <h2 class="h5">Your Words</h2>
+            <p class="text-muted">Add your magical details to shape the story.</p>
 
-<!-- About   -->
-<section id="about" class="py-5">
-  <div class="container d-flex flex-column flex-md-row align-items-center">
-    <div class="about-text p-4 rounded shadow-sm me-md-4">
-      <h2 class="fw-bold mb-3">About Me</h2>
-      <p>
-        My name is Devin Lampier, and I am a student at Lethbridge Polytechnic. I am passionate about photography and travel, and I enjoy practicing graphic design in my spare time. My work often explores the intersection between nature and creativity, finding inspiration in the details that many overlook. I am part of a family business called TraveLLLers3 Fine Arts and Photography, where we share our artistic vision through images and stories from our adventures.
-      </p>
-      <p>
-        I have lived in Lethbridge my entire life and draw inspiration from the landscapes, wildlife, and people around me. Photography allows me to capture moments of beauty and stillness, while design helps me express those same emotions visually. Whether I am taking photos of local wildlife, designing digital pieces, or traveling to new places, I am always looking for ways to grow as an artist and storyteller.
-      </p>
+            <form id="storyForm" class="row g-3" onsubmit="generateStory(); return false;" onreset="clearStory()">
+<!-- fixed form s-->
+            <div class="col-12">
+  <label class="form-label">Kid's Name</label>
+  <small class="text-muted d-block">The name of the hero of the story!</small>
+  <input type="text" id="kidName" class="form-control" required>
+</div>
+
+<div class="col-12">
+  <label class="form-label">Dragon Name</label>
+  <small class="text-muted d-block">Give your dragon a fun or silly name.</small>
+  <input type="text" id="dragonName" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+  <label class="form-label">Adjective</label>
+  <small class="text-muted d-block">A describing word, like: <em>happy, tiny, glowing</em>.</small>
+  <input type="text" id="adjective" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+  <label class="form-label">Animal</label>
+  <small class="text-muted d-block">Any creature, like: <em>cat, turtle, dragonfly</em>.</small>
+  <input type="text" id="animal" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+  <label class="form-label">Past-Tense Verb</label>
+  <small class="text-muted d-block">An action that already happened, like: <em>jumped, baked, carried</em>.</small>
+  <input type="text" id="verbPast" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+  <label class="form-label">Food</label>
+  <small class="text-muted d-block">Any tasty food, like: <em>cookies, pasta, apples</em>.</small>
+  <input type="text" id="food" class="form-control" required>
+</div>
+
+<div class="col-md-4">
+  <label class="form-label">Number</label>
+  <small class="text-muted d-block">Pick any number you like.</small>
+  <input type="number" id="number" class="form-control" required>
+</div>
+
+<div class="col-md-8">
+  <label class="form-label">Place</label>
+  <small class="text-muted d-block">Somewhere fun, like: <em>park, cave, castle</em>.</small>
+  <input type="text" id="place" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+  <label class="form-label">Emotion</label>
+  <small class="text-muted d-block">A feeling, like: <em>excited, nervous, proud</em>.</small>
+  <input type="text" id="emotion" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+  <label class="form-label">Object</label>
+  <small class="text-muted d-block">A thing you can touch, like: <em>ball, toy, rock</em>.</small>
+  <input type="text" id="object" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+  <label class="form-label">Color</label>
+  <small class="text-muted d-block">Any colour, like: <em>blue, red, sparkly purple</em>.</small>
+  <input type="text" id="color" class="form-control" required>
+</div>
+
+              <div class="col-md-6">
+                <label class="form-label">Setting</label>
+                <select id="setting" class="form-select">
+                  <option>Enchanted Forest</option>
+                  <option>Mystic Mountains</option>
+                  <option>Crystal Caverns</option>
+                  <option>Old Kingdom Ruins</option>
+                  <option>Twisted Tavern</option>
+                </select>
+              </div>
+<!-- emotions -->
+              <fieldset class="col-12">
+                <legend class="col-form-label pt-0">Tone</legend>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="tone" value="silly" checked>
+                  <label class="form-check-label">Calm</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="tone" value="spooky">
+                  <label class="form-check-label">Happy</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="tone" value="calm">
+                  <label class="form-check-label">Silly</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="tone" value="calm">
+                  <label class="form-check-label">Scary</label>
+                </div>
+              </fieldset>
+<!-- reset and generate-->
+              <div class="col-12 d-flex gap-2">
+                <button class="btn btn-fantasy" type="submit">Generate Story</button>
+                <button class="btn btn-outline-secondary" type="reset">Reset</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </section>
+<!-- story side -->
+      <aside class="col-lg-6">
+        <div class="card shadow-sm fantasy-card h-100 fade-in">
+          <div class="card-body">
+            <h2 class="h5">Your Story</h2>
+            <p class="text-muted">Your magical tale will appear below.</p>
+            <div id="storyOutput" class="p-3 rounded fantasy-story">
+              <div class="text-center text-muted">No story yet — fill the form and let the magic begin.</div>
+            </div>
+          </div>
+        </div>
+      </aside>
     </div>
-    <img src="images/DevinProfile.png" alt="Devin Lampier Profile Photo" class="rounded-circle profile-img ms-md-4 shadow-sm">
-  </div>
-</section>
+  </main>
 
-<!-- Gallery   -->
- <!-- Maybe carousel can go faster?  -->
-<section id="gallery" class="py-5 text-center">
-  <div class="container">
-    <h2 class="fw-bold mb-4">Gallery</h2>
-    <div id="galleryCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active"><img src="images/MagpieDevin.png" class="d-block w-100" alt="Magpie Piece"></div>
-        <div class="carousel-item"><img src="images/TreefrogDevin.png" class="d-block w-100" alt="Treefrog Piece"></div>
-        <div class="carousel-item"><img src="images/SpiderDevin.png" class="d-block w-100" alt="Spider Piece"></div>
-        <div class="carousel-item"><img src="images/MushroomDevin.png" class="d-block w-100" alt="Mushroom Piece"></div>
-        <div class="carousel-item"><img src="images/DevinSunflower.jpg" class="d-block w-100" alt="Sunflower Piece"></div>
-        <div class="carousel-item"><img src="images/DevinTrain.jpg" class="d-block w-100" alt="Train Piece"></div>
-      </div>
-    </div>
-  </div>
-</section>
+  <footer class="text-center py-4 mt-5 fantasy-footer">
+    <small>Madlibs Final - Devin Lampier</small>
+  </footer>
 
-<!-- Connect  -->
-<section id="connect" class="py-5 text-center">
-  <div class="container">
-    <h2 class="fw-bold mb-4">Connect With Me</h2>
-    <a href="https://www.travelllers3.ca" target="_blank" class="btn btn-outline-dark me-3"><i class="fas fa-globe me-2"></i>Our Website</a>
-    <a href="https://www.facebook.com/people/Travelllers3/100058107847415" target="_blank" class="btn btn-outline-dark me-3"><i class="fab fa-facebook-f me-2"></i>Facebook</a>
-    <a href="https://www.instagram.com/travelllers3" target="_blank" class="btn btn-outline-dark"><i class="fab fa-instagram me-2"></i>Instagram</a>
-  </div>
-</section>
-
-<footer class="text-center py-3 mt-4">
-  <p class="mb-0 small">&copy; Created by Devin Lampier</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
- 
